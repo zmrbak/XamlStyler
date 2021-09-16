@@ -7,4 +7,4 @@ The Original project come from https://github.com/Xavalon/XamlStyler
 
 
 ## Downloads
-https://github.com/zmrbak/XamlStyler/releases/download/2021.09.16/XamlStyler2022.7z
+https://marketplace.visualstudio.com/items?itemName=Zmrbak.xamlstyler
