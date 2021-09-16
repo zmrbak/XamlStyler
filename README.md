@@ -6,12 +6,12 @@ XAML Styler is a visual studio extension that formats XAML source code based on 
 The Original project come from https://github.com/Xavalon/XamlStyler
 
 ## How to use?
+
 Just press "Ctrl + S" 
 Or Clikc "Save" button.
 
-<img src="/zmrbak/XamlStyler/blob/main/images/Before.png?raw=true">
-<br/>
-<img src="/zmrbak/XamlStyler/blob/main/images/Save.png?raw=true">
+<img src="https://github.com/zmrbak/XamlStyler/blob/main/images/Before.png?raw=true"><br/>
+<img src="https://github.com/zmrbak/XamlStyler/blob/main/images/Save.png?raw=true">
 
 ## Downloads
 https://marketplace.visualstudio.com/items?itemName=Zmrbak.xamlstyler
