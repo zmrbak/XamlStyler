@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F240A291-F622-4350-B2B4-F04E0D40C41B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XamlStyler</RootNamespace>
+    <AssemblyName>XamlStyler</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Irony, Version=1.1.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Irony.1.1.0\lib\net40\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DocumentManipulation\AttributeRemovalService.cs" />
+    <Compile Include="DocumentManipulation\AttributeSelector.cs" />
+    <Compile Include="DocumentManipulation\DocumentManipulationService.cs" />
+    <Compile Include="DocumentManipulation\FormatThicknessService.cs" />
+    <Compile Include="DocumentManipulation\IProcessElementService.cs" />
+    <Compile Include="DocumentManipulation\ISortableAttribute.cs" />
+    <Compile Include="DocumentManipulation\NameSelector.cs" />
+    <Compile Include="DocumentManipulation\NodeCollection.cs" />
+    <Compile Include="DocumentManipulation\NodeReorderService.cs" />
+    <Compile Include="DocumentManipulation\SortableNumericAttribute.cs" />
+    <Compile Include="DocumentManipulation\SortableStringAttribute.cs" />
+    <Compile Include="DocumentManipulation\SortBy.cs" />
+    <Compile Include="DocumentManipulation\ThicknessFormatter.cs" />
+    <Compile Include="DocumentManipulation\ThicknessStyle.cs" />
+    <Compile Include="DocumentManipulation\VSMReorderService.cs" />
+    <Compile Include="DocumentManipulation\Wildcard.cs" />
+    <Compile Include="DocumentProcessors\CDATADocumentProcessor.cs" />
+    <Compile Include="DocumentProcessors\CommentDocumentProcessor.cs" />
+    <Compile Include="DocumentProcessors\ElementDocumentProcessor.cs" />
+    <Compile Include="DocumentProcessors\ElementProcessContext.cs" />
+    <Compile Include="DocumentProcessors\EndElementDocumentProcessor.cs" />
+    <Compile Include="DocumentProcessors\IDocumentProcessor.cs" />
+    <Compile Include="DocumentProcessors\ProcessInstructionDocumentProcessor.cs" />
+    <Compile Include="DocumentProcessors\SignificantWhitespaceDocumentProcessor.cs" />
+    <Compile Include="DocumentProcessors\TextDocumentProcessor.cs" />
+    <Compile Include="DocumentProcessors\WhitespaceDocumentProcessor.cs" />
+    <Compile Include="DocumentProcessors\XmlDeclarationDocumentProcessor.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Extensions\XmlReaderExtensions.cs" />
+    <Compile Include="MarkupExtensions\Formatter\AttributeInfoFactory.cs" />
+    <Compile Include="MarkupExtensions\Formatter\AttributeInfoFormatter.cs" />
+    <Compile Include="MarkupExtensions\Formatter\MarkupExtensionFormatter.cs" />
+    <Compile Include="MarkupExtensions\Formatter\MarkupExtensionFormatterBase.cs" />
+    <Compile Include="MarkupExtensions\Formatter\MultiLineMarkupExtensionFormatter.cs" />
+    <Compile Include="MarkupExtensions\Formatter\SingleLineMarkupExtensionFormatter.cs" />
+    <Compile Include="MarkupExtensions\Parser\Argument.cs" />
+    <Compile Include="MarkupExtensions\Parser\IMarkupExtensionParser.cs" />
+    <Compile Include="MarkupExtensions\Parser\LiteralValue.cs" />
+    <Compile Include="MarkupExtensions\Parser\MarkupExtension.cs" />
+    <Compile Include="MarkupExtensions\Parser\MarkupExtensionParser.cs" />
+    <Compile Include="MarkupExtensions\Parser\MemberNameOrStringTerminal.cs" />
+    <Compile Include="MarkupExtensions\Parser\MemberNameTerminal.cs" />
+    <Compile Include="MarkupExtensions\Parser\NamedArgument.cs" />
+    <Compile Include="MarkupExtensions\Parser\PositionalArgument.cs" />
+    <Compile Include="MarkupExtensions\Parser\StringTerminal.cs" />
+    <Compile Include="MarkupExtensions\Parser\TypeNameTerminal.cs" />
+    <Compile Include="MarkupExtensions\Parser\Value.cs" />
+    <Compile Include="MarkupExtensions\Parser\XamlMarkupExtensionGrammar.cs" />
+    <Compile Include="Model\AttributeInfo.cs" />
+    <Compile Include="Model\AttributeOrderRule.cs" />
+    <Compile Include="Model\AttributeOrderRules.cs" />
+    <Compile Include="Options\AttributeIndentationStyle.cs" />
+    <Compile Include="Options\IStylerOptions.cs" />
+    <Compile Include="Options\LineBreakRule.cs" />
+    <Compile Include="Options\ReorderSettersBy.cs" />
+    <Compile Include="Options\StringArrayConverter.cs" />
+    <Compile Include="Options\StylerOptions.cs" />
+    <Compile Include="Options\VisualStateManagerRule.cs" />
+    <Compile Include="Parser\ContentTypeEnum.cs" />
+    <Compile Include="Parser\ElementProcessStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IndentService.cs" />
+    <Compile Include="Services\XmlEscapingService.cs" />
+    <Compile Include="StylerService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Options\DefaultSettings.json" />
+    <None Include="Key.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
